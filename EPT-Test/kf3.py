@@ -9,28 +9,28 @@ def fix_eq(eq):
 
 print(f"\n{bold_color}{'p²y + a₁py + a₀y = b₂p²x + b₁px + b₀x = c₂p²z + c₁pz + c₀z'}{reset_color}")
 
-a1, a0 = -2, -6
-b2, b1, b0 = -0, 5, 1
-c2, c1, c0 = -5, -4, -7
+a1, a0 = -5, 3
+b2, b1, b0 = 0, -6, 3
+c2, c1, c0 = 0, 5, -4
 
-C1, C2 = 2, 6
-D1, D2 = 7, -2
-E1, E2 = 1, 0
+C1, C2 = 2, 8
+D1, D2 = 1, 0
+E1, E2 = -2, -5
 
 print(f"\n{bold_color}{'————————————————Початкові умови————————————————'}{reset_color}\n",
-      "\t\tb₂=", b2, "\tc₂=", c2, "\tC₂=", C2, "\tD₂=", D2, "\tE₂=", E2,
-      "\na₁=", a1, "\tb₁=", b1, "\tc₁=", c1, "\tC₁=", C1, "\tD₁=", D1, "\tE₁=", E1,
+      "\t\tb₂=", b2, "\tc₂=", c2, "\tC₁=", C1, "\tD₁=", D1, "\tE₁=", E1,
+      "\na₁=", a1, "\tb₁=", b1, "\tc₁=", c1, "\tC₂=", C2, "\tD₂=", D2, "\tE₂=", E2,
       "\na₀=", a0, "\tb₀=", b0, "\tc₀=", c0, "\n\nФорма: КФЗ")
 print(f"{bold_color}{'———————————————————————————————————————————————'}{reset_color}")
 
 print(f"\t{bold_color}{'1 - Запис еквівалентної форми УВЗ'}{reset_color}")
 
 print("y = y₁ + α₂x + β₂z",
-      "\npy₁ = y₂ - a₁y₁ + α₁x + β₁z",
+      "\npy₁ = y₂ - a₁y + α₁x + β₁z",
       "\npy₂ = -a₀y + α₀x + β₀z\n")
 
 system = "y = y₁ + α₂x + β₂z" + \
-          "\npy₁ = y₂ - " + str(a1) + "y₁ + α₁x + β₁z" + \
+          "\npy₁ = y₂ - " + str(a1) + "y + α₁x + β₁z" + \
           "\npy₂ = -" + str(a0) + "y + α₀x + β₀z\n"
 
 print(fix_eq(system))
